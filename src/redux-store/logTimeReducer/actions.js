@@ -1,4 +1,8 @@
 export const logTimeActions = {
-    testAction:
-     () => ({type: 'TEST_TYPE'})
+    dateAction:
+     () => ({type: 'DATE_DATA'}),
+    bodyAction:
+     () => ({type: 'BODY_DATA'}),
+    timeAction:
+     () => ({type: 'TIME_DATA'}),
 }

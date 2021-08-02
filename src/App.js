@@ -1,11 +1,10 @@
-import { TestComponent } from "./components/TestComponent";
+import { TimeTracking } from "./pages/TimeTracking";
 
 
 function App() {
   return (
     <div className="App">
-     intership
-     <TestComponent/>
+    <TimeTracking/>
     </div>
   );
 }
