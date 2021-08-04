@@ -1,18 +1,19 @@
-import {logTimeActions} from "./actions"
-const {dataItem} = logTimeActions;
-const initialState = {};
+
+
+const initialState = [];
 
 const reducer = (state = initialState, action)=>{
 switch (action.type) {
     case 'LIST_DATA':
-        return{
+        return [
             ...state,
-             dataItem
-        }
-        
+             action.payload
+        ]
 
         default: return state
 }
 };
 
+  
 export default reducer
+
