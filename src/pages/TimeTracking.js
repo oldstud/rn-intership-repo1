@@ -5,6 +5,7 @@ import {logTimeActions} from "../redux-store/logTimeReducer/actions"
 
 import { CustomButton } from "../components/CustomButton";
 import { CustomInput } from "../components/CustomInput"
+import { List } from "../components/List";
 
 
 export const TimeTracking = ()=> {
@@ -20,7 +21,7 @@ const combineDataToState = (itemValue,itemkey)=> {
 
 
 
-    const show =()=>{
+    const handlerButton =()=>{
         console.log(state)
         dispatch(logTimeActions.dataAction(state))
     };
@@ -31,9 +32,9 @@ const combineDataToState = (itemValue,itemkey)=> {
             <CustomInput type="date" changeState={combineDataToState}/>
             <CustomInput type="text" changeState={combineDataToState}/>
             <CustomInput type="time" changeState={combineDataToState}/>
-            <CustomButton trigger={show}/>
+            <CustomButton trigger={handlerButton}/>
 
-       
+            <List/>
         </div>
     )
 }
