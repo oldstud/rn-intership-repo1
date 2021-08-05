@@ -8,8 +8,6 @@ const [itemData,setItemData] = useState('');
 const onChange = (event) => {
     setItemData(event.target.value);
     if(itemData.trim()){
-        
-        
     changeState(itemData,type);
     }
 }
