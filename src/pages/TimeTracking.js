@@ -20,7 +20,7 @@ const combineDataToState = (itemValue,itemkey)=> {
 
 
 
-    const show =()=>{
+    const handlerButton =()=>{
         console.log(state)
         dispatch(logTimeActions.dataAction(state))
     };
@@ -31,11 +31,10 @@ const combineDataToState = (itemValue,itemkey)=> {
             <CustomInput type="date" changeState={combineDataToState}/>
             <CustomInput type="text" changeState={combineDataToState}/>
             <CustomInput type="time" changeState={combineDataToState}/>
-            <CustomButton trigger={show}/>
-            <br></br>
-            <List/>
 
-       
+            <CustomButton trigger={handlerButton}/>
+
+            <List/>
         </div>
     )
 }
