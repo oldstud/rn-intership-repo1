@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 
-import {logTimeActions} from "../redux-store/logTimeReducer/actions"
+// import {logTimeActions} from "../redux-store/logTimeReducer/actions"
+import {dataAction} from "../redux-store/logTimeReducer/actions"
+
 
 import { CustomButton } from "../components/CustomButton";
 import { CustomInput } from "../components/CustomInput"
@@ -22,7 +24,8 @@ const combineDataToState = (itemValue,itemkey)=> {
 
     const handlerButton =()=>{
         console.log(state)
-        dispatch(logTimeActions.dataAction(state))
+        // dispatch(logTimeActions.dataAction(state))
+        dispatch(dataAction(state))
     };
 
 
