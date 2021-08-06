@@ -6,8 +6,9 @@ export const List =()=>{
 
    if(stateList){ 
 
-    return(<ul>{stateList.map((item,key)=><li className={`field-${key+1}`}><i>{item.date}</i><b>{item.text}</b><i>{item.time}</i></li>)}</ul>) 
-                }else{
-    return (<div>Nothing</div>)
-}   
+       return(<ul>{stateList.map((item,key)=><li className={`field-${key+1}`}><i>{item.date}</i><b>{item.text}</b><i>{item.time}</i></li>)}</ul>) 
+}else{
+     return (<div>Nothing</div>)
+}
+
 }
