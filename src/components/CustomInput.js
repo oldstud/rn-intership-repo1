@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 export const CustomInput = (props)=>{
 const{ type, changeState } = props;
@@ -11,14 +12,20 @@ const onChange = (event) => {
     changeState(itemData,type);
     }
 }
-
+const gState = useSelector(state => state.reducer);
+useEffect(()=>{
+    
+        setItemData("")
+    
+   
+},[gState])
 
 
     return (
         <>
         <input
         type={type} 
-        value={itemData || ''} 
+        value={itemData} 
         onChange={(event)=> onChange(event) }
         />
         </>

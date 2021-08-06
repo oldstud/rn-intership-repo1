@@ -11,8 +11,8 @@ import { List } from "../components/List";
 
 
 export const TimeTracking = ()=> {
-
-const [state, setState] = useState({date:"", text:"", time:""});
+const initialLocalState = {date:"", text:"", time:""};
+const [state, setState] = useState(initialLocalState);
 
 const dispatch = useDispatch();
 
@@ -20,23 +20,23 @@ const combineDataToState = (itemValue,itemkey)=> {
     setState({...state, [itemkey] : itemValue});
 };
 
-
-
-    const handlerButton =()=>{
+    const handlerButton = () => {
         console.log(state)
         // dispatch(logTimeActions.dataAction(state))
-        dispatch(dataAction(state))
+        dispatch(dataAction(state));
+        setState(initialLocalState);
     };
 
+    
 
     return (
         <div>
+
             <CustomInput type="date" changeState={combineDataToState}/>
             <CustomInput type="text" changeState={combineDataToState}/>
             <CustomInput type="time" changeState={combineDataToState}/>
 
             <CustomButton trigger={handlerButton}/>
-
             <List/>
         </div>
     )
