@@ -6,7 +6,7 @@ import {dataAction} from './actions'
 
 
 
-const reducer = createReducer([],{
+const reducerLogs = createReducer([],{
     [dataAction]:(state,action)=>[...state,action.payload]
 })
 
@@ -27,5 +27,5 @@ const reducer = createReducer([],{
 // };
 
   
-export default reducer
+export default reducerLogs
 

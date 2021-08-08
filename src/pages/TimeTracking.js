@@ -27,7 +27,6 @@ const combineDataToState = (itemValue,itemkey)=> {
         setState(initialLocalState);
     };
 
-    
 
     return (
         <div>

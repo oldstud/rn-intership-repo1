@@ -12,12 +12,9 @@ const onChange = (event) => {
     changeState(itemData,type);
     }
 }
-const gState = useSelector(state => state.reducer);
+const gState = useSelector(state => state.logtime);
 useEffect(()=>{
-    
         setItemData("")
-    
-   
 },[gState])
 
 

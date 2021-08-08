@@ -1,11 +1,21 @@
-import { combineReducers, createStore } from "redux";
-import reducer from './logTimeReducer/reducer'
-const rootReducer = combineReducers({
- reducer,
- 
+import { configureStore } from "@reduxjs/toolkit";
+// import { combineReducers} from "redux";
+import reducerLogs from './logTimeReducer/reducerLogs'
+import reducerWeather from './weatherThunkReducer/reducerWeather'
 
-});
+// const rootReducer = combineReducers({
+//  reducerLogs,
+//  reducerWeather,
+//  isLoading,
+//  error
 
-export const store = createStore(
-    rootReducer,
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+
+// });
+
+export const store = configureStore({
+        reducer:{
+            logtime:reducerLogs,
+            weather:reducerWeather
+        }
+
+    });
