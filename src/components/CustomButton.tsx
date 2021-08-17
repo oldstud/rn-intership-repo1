@@ -1,5 +1,5 @@
 
-export const CustomButton = (props) => {
+export const CustomButton = (props:any) => {
     return (
 
         <button onClick={props.trigger}>Add</button>
