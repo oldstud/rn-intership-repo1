@@ -2,12 +2,13 @@ import { TimeTracking } from "./pages/TimeTracking";
 import { Weather } from "./pages/Weather";
 
 
-function App() {
+const App: React.FC =()=> {
   return (
     <div className="App">
-    <TimeTracking/>
 
+    <TimeTracking/>
     <Weather></Weather>
+    
     </div>
   );
 }
