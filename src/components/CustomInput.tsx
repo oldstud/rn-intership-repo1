@@ -22,7 +22,7 @@ const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 
 }
 
-const gState = useSelector(state => state.logtime );
+const gState = useSelector((state:any) => state.logtime );
 
     useEffect(()=>{
             setItemData("")
